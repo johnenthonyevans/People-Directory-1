@@ -106,6 +106,15 @@ struct PersonRowView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            Spacer()
+            if !person.level.isEmpty {
+                Text(person.level)
+                    .font(.caption2.weight(.medium))
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(.gray.opacity(0.15))
+                    .clipShape(Capsule())
+            }
         }
         .padding(.vertical, 4)
     }
