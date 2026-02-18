@@ -37,14 +37,14 @@ _Created with Drift capture_
 
 > [!NOTE]
 > **Medium Risk**
-> Introduces new CSV parsing and a large bundled dataset that now drives list rendering and grouping, so malformed rows or performance regressions could impact UI correctness.
+> Introduces new CSV parsing and a large bundled dataset that now drives UI grouping/sorting, so malformed rows or edge-case values could cause missing or misordered entries.
 > 
 > **Overview**
-> Adds an in-app **People directory** driven by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing.
+> Adds an in-app **People directory** backed by a bundled `people.csv`, including a `Person` model and `PeopleData.load()` CSV parsing.
 > 
-> Replaces the placeholder `ContentView` with a searchable `NavigationStack` list that can be grouped via a segmented picker (Name/Level/Location) and navigates to a `PersonDetailView`. Also fixes grouping/sorting edge cases by sorting Level sections numerically (e.g., `L3`…`L11`), using case-insensitive name sorting, and avoiding a dangling `·` separator when `audience` is empty; detail header avatar gets extra vertical padding.
+> Replaces the placeholder UI with a searchable `NavigationStack` list that can be grouped via a segmented picker (Name/Level/Location), navigates to a person detail screen, and includes sorting/presentation fixes (numeric Level section ordering, case-insensitive name sort, no dangling `·` when audience is empty, and better avatar header padding).
 > 
-> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 81e1efdf24868410f854feb01b0601780c41f4f7. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit cca9b205d55065e9f236f3040f304ac8d4c70f98. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
 <!-- /CURSOR_SUMMARY -->
 
 ## Comments
@@ -201,6 +201,38 @@ _Captured 2026-02-18T18:29:23Z (7s, interaction, window: Simulator — iPhone 17
 
 
 🧟‍♀️ Drift: Fixed case-sensitive name sort: names now use localizedCaseInsensitiveCompare so lowercase names like 'bohdan' sort alphabetically among uppercase names instead of after them.
+
+### johnenthonyevans — 2026-02-18T20:57:57Z
+
+
+🧟‍♀️ Drift: Fixed initials for contractor-suffixed names: bracket-enclosed parts like [C] are now filtered out before computing initials, so 'Linea Högberg [C]' shows 'LH' instead of 'L['.
+
+### matej-doordash — 2026-02-18T21:17:18Z
+
+
+Levels should maybe be displayed on the main list
+
+### johnenthonyevans — 2026-02-18T21:17:42Z
+
+
+### 🧟‍♀️ Drift: Capture
+
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T21-17-37Z/capture.mp4
+
+"<img src="https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T21-17-37Z/interactions/interaction-1-00m03s000.png" width="300" />"
+
+"<img src="https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T21-17-37Z/interactions/interaction-2-00m03s000.png" width="300" />"
+
+"<img src="https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T21-17-37Z/interactions/interaction-3-00m07s000.png" width="300" />"
+
+"<img src="https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T21-17-37Z/interactions/interaction-4-00m07s000.png" width="300" />"
+
+**Transcript:**
+> Pay like I like the spacing here but
+when I click in here like I kind of feel like I
+kind of feel like this is a bit of wasted space and we should fix that and then
+
+_Captured 2026-02-18T21:17:37Z (12s, interaction, window: Simulator — iPhone 17)_
 
 ## Tasks
 

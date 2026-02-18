@@ -99,6 +99,11 @@ LOCATIONS END -->
 
 I think the profile picture needs in the profile view needs a bit of a breathing room
 
+### @matej-doordash — 2026-02-18T21:17:18Z
+
+
+Levels should maybe be displayed on the main list
+
 
 ## PR Description
 
@@ -106,15 +111,15 @@ Hey I think this is a bit basic, but does the job, what should I add?
 
 Add a people directory that loads from CSV, displays a searchable list with initials avatars, and navigates to a detail view with level, role, country, and audience.
 
-[Watch a detailed screen recording](.drift/prs/1/assets/asset-14.mp4)
+[Watch a detailed screen recording](.drift/prs/1/assets/asset-19.mp4)
 
-<img src=".drift/prs/1/assets/asset-15.png" width="300" />
+<img src=".drift/prs/1/assets/asset-20.png" width="300" />
 > [8s] The People list view showing each person with their initials, role, and audience.
 
-<img src=".drift/prs/1/assets/asset-16.png" width="300" />
+<img src=".drift/prs/1/assets/asset-21.png" width="300" />
 > [17s] Scrolling through the full list — it shows everyone loaded from the CSV.
 
-<img src=".drift/prs/1/assets/asset-17.png" width="300" />
+<img src=".drift/prs/1/assets/asset-22.png" width="300" />
 > [29s] Tapping into a person shows the detail view with level, role, country, and audience.
 
 1. `Person.swift` — new model struct with `fullName`, `track`, `level`, `role`, `country`, `audience`, and computed `initials`
@@ -129,14 +134,14 @@ _Created with Drift capture_
 
 > [!NOTE]
 > **Medium Risk**
-> Introduces new CSV parsing and a large bundled dataset that now drives list rendering and grouping, so malformed rows or performance regressions could impact UI correctness.
+> Introduces new CSV parsing and a large bundled dataset that now drives UI grouping/sorting, so malformed rows or edge-case values could cause missing or misordered entries.
 > 
 > **Overview**
-> Adds an in-app **People directory** driven by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing.
+> Adds an in-app **People directory** backed by a bundled `people.csv`, including a `Person` model and `PeopleData.load()` CSV parsing.
 > 
-> Replaces the placeholder `ContentView` with a searchable `NavigationStack` list that can be grouped via a segmented picker (Name/Level/Location) and navigates to a `PersonDetailView`. Also fixes grouping/sorting edge cases by sorting Level sections numerically (e.g., `L3`…`L11`), using case-insensitive name sorting, and avoiding a dangling `·` separator when `audience` is empty; detail header avatar gets extra vertical padding.
+> Replaces the placeholder UI with a searchable `NavigationStack` list that can be grouped via a segmented picker (Name/Level/Location), navigates to a person detail screen, and includes sorting/presentation fixes (numeric Level section ordering, case-insensitive name sort, no dangling `·` when audience is empty, and better avatar header padding).
 > 
-> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 81e1efdf24868410f854feb01b0601780c41f4f7. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit cca9b205d55065e9f236f3040f304ac8d4c70f98. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
 <!-- /CURSOR_SUMMARY -->
 
 ## Instructions

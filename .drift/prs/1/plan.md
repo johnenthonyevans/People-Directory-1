@@ -11,3 +11,4 @@ There is also feedback from other reviewers that would require @johnenthonyevans
 - @cursor[bot]: **People Directory 1/ContentView.swift**
 - @cursor[bot]: **People Directory 1/Person.swift:23**
 - @matej-doordash: I think the profile picture needs in the profile view needs a bit of a breathing room
+- @matej-doordash: Levels should maybe be displayed on the main list
