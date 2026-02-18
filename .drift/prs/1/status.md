@@ -37,14 +37,14 @@ _Created with Drift capture_
 
 > [!NOTE]
 > **Medium Risk**
-> Introduces new CSV parsing and a large bundled dataset that now drives list rendering, search, and grouping; malformed/edge-case rows or performance issues could impact UI correctness.
+> Introduces new CSV parsing and a large bundled dataset that now drives list rendering and grouping, so malformed rows or performance regressions could impact UI correctness.
 > 
 > **Overview**
-> Adds an in-app **People directory** backed by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing.
+> Adds an in-app **People directory** driven by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing.
 > 
-> Replaces the placeholder `ContentView` with a searchable, sectioned list and a segmented *Group by* control (Name/Level/Location), plus navigation to a new `PersonDetailView`; also fixes Level sorting to be numeric (e.g., `L3`…`L11`) and avoids a dangling separator when `audience` is empty in the row subtitle.
+> Replaces the placeholder `ContentView` with a searchable `NavigationStack` list that can be grouped via a segmented picker (Name/Level/Location) and navigates to a `PersonDetailView`. Also fixes grouping/sorting edge cases by sorting Level sections numerically (e.g., `L3`…`L11`), using case-insensitive name sorting, and avoiding a dangling `·` separator when `audience` is empty; detail header avatar gets extra vertical padding.
 > 
-> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit eddf55b3f436a4a0d807fb7d510f0f093c355650. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 81e1efdf24868410f854feb01b0601780c41f4f7. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
 <!-- /CURSOR_SUMMARY -->
 
 ## Comments
@@ -92,7 +92,7 @@ LOCATIONS END -->
 ### cursor[bot] — 2026-02-18T19:43:10Z
 
 
-**People Directory 1/ContentView.swift:44**
+**People Directory 1/ContentView.swift**
 
 ### Case-sensitive sort misorders lowercase names in sections
 
@@ -108,6 +108,26 @@ The within-section sort uses `$0.fullName < $1.fullName`, which is case-sensitiv
 People Directory 1/ContentView.swift#L43-L44
 LOCATIONS END -->
 <p><a href="https://cursor.com/open?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9DVVJTT1IiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmE1NWZjNmQzLTc1NWQtNGNlNy1iOGFlLTVjZjFjNDhiOGYyMyIsImVuY3J5cHRpb25LZXkiOiJnU2E2b0c5UmhEel8tNDRvMXB1azRhalpoaU9oOG9MZFRHY0RaUUJUT09NIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIn0sImlhdCI6MTc3MTQ0Mzc4OSwiZXhwIjoxNzc0MDM1Nzg5fQ.zLW1XmKse4wsXD0XWY_OdJc193T1CSz_i_tU0eKOLhIMpUd1DYldAbWjaPsGThMFNpnjFAwezlAwjCoyYIzMH9VqMIngpND20z3uoCggqpMXFOGo2dTj5Bd-ZOZVlMjh7XUvll8T678eFuPTB_E5VJo5kl3kfs_4epUXG62f3JR865d5-A6M7YxUSDzzboga7NAvTg76VHvVnUq0wnfvhlNvU5G9LMOLNVbcBZIRhItqcM0otDcJEYTIAGvqjQlX_6KBc5yIat9xnlawwlPKeDr2gPcgJwKoTOHKwC41NGqikpx3DcXCywTPVcFfNGGpAK2SCd9M9ATAwhYrSxUShw" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cursor.com/assets/images/fix-in-cursor-dark.png"><source media="(prefers-color-scheme: light)" srcset="https://cursor.com/assets/images/fix-in-cursor-light.png"><img alt="Fix in Cursor" width="115" height="28" src="https://cursor.com/assets/images/fix-in-cursor-dark.png"></picture></a>&nbsp;<a href="https://cursor.com/agents?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9XRUIiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmE1NWZjNmQzLTc1NWQtNGNlNy1iOGFlLTVjZjFjNDhiOGYyMyIsImVuY3J5cHRpb25LZXkiOiJnU2E2b0c5UmhEel8tNDRvMXB1azRhalpoaU9oOG9MZFRHY0RaUUJUT09NIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIiwicHJOdW1iZXIiOjEsImNvbW1pdFNoYSI6ImVkZGY1NWIzZjQzNmE0YTBkODA3ZmI3ZDUxMGYwZjA5M2MzNTU2NTAiLCJwcm92aWRlciI6ImdpdGh1YiJ9LCJpYXQiOjE3NzE0NDM3ODksImV4cCI6MTc3NDAzNTc4OX0.LOswwTDjWxJAWYTVnhEv2XTtWKOsrolHqDDtCBsiq33ARygZCV8UJTEco4WfE6qm0bgeZNfa0btzGI2E09I81OBgO1JD5nF11ZcX5DrEiG6nL95QDIsgqIr_bevj5gySfkQdbCYC6CT66cI9zL7XHQ8Y-9xCw5iyuSCw-pTLa4IPd5yo1FzdMMLluOikGeblDhXLQblTYIANeEAvJJzTfdplJx6-0Xgxd7vnEefjDPHNGXaCcXEJIYdmV8M508vWtALsj_e1rUGE3DYh8GalfEuGMint2VUAeupb_N_uf0fZoVYHTjoTEchRvcu80XqjAvWvi7pqxiYFAIMcnDecLw" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cursor.com/assets/images/fix-in-web-dark.png"><source media="(prefers-color-scheme: light)" srcset="https://cursor.com/assets/images/fix-in-web-light.png"><img alt="Fix in Web" width="99" height="28" src="https://cursor.com/assets/images/fix-in-web-dark.png"></picture></a></p>
+
+### cursor[bot] — 2026-02-18T20:07:38Z
+
+
+**People Directory 1/Person.swift:23**
+
+### Initials show bracket for contractor-suffixed names
+
+**Low Severity**
+
+<!-- DESCRIPTION START -->
+The `initials` computed property uses `parts.last?.first` to get the last-name initial. Three people in the bundled CSV have a `[C]` contractor suffix (e.g. `Linea Högberg [C]`), so `parts.last` is `"[C]"` and its `.first` character is `"["`. This produces initials like `"L["` instead of `"LH"`, displaying a bracket character in both the list row and detail view avatar circles.
+<!-- DESCRIPTION END -->
+
+<!-- BUGBOT_BUG_ID: b781a58e-52f8-4e9e-9cf1-bf873a1f9f89 -->
+
+<!-- LOCATIONS START
+People Directory 1/Person.swift#L16-L23
+LOCATIONS END -->
+<p><a href="https://cursor.com/open?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9DVVJTT1IiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmExNzM5ZmNiLWVjOGItNDM2Ni1iM2QxLTIyZjBiZTZmMmZmYyIsImVuY3J5cHRpb25LZXkiOiJKNnRqYmJuZlNscUtNd1JtOWtXemZmSnZZZ3NYME41S04tYmZTc0lXckQwIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIn0sImlhdCI6MTc3MTQ0NTI1OCwiZXhwIjoxNzc0MDM3MjU4fQ.jO6-_jSQaQn58dAirnFv24xYPcZ6ZNusZRyxRRcDq7A_PzQPjZSKDSxUKN-0rXr7UwT4C7UhpeFy0SzacUrofChU3r8JQpmV1Z4wmCjhokwT3wfM9feVQJnwV3Bkyh1L1BxGVWTDw-SPLzh_RndzTDm3bCIidtsb88Kke6TDZA-_qt27xa8MybTxWQFIFbRy2xDZqOPjEtBZfSmuvhWkSwzlZ9Ut88KwcsG-avhAhbYhhM6PdTOGdoQmhDefKT65T8NdaWk9iRo20aoGpJcIHn3RUNDOky19-hycFmNXazqAgptIu54hjnIX-PyfDT5C0X_VkEUOpZV0s-EBckm-hg" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cursor.com/assets/images/fix-in-cursor-dark.png"><source media="(prefers-color-scheme: light)" srcset="https://cursor.com/assets/images/fix-in-cursor-light.png"><img alt="Fix in Cursor" width="115" height="28" src="https://cursor.com/assets/images/fix-in-cursor-dark.png"></picture></a>&nbsp;<a href="https://cursor.com/agents?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9XRUIiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmExNzM5ZmNiLWVjOGItNDM2Ni1iM2QxLTIyZjBiZTZmMmZmYyIsImVuY3J5cHRpb25LZXkiOiJKNnRqYmJuZlNscUtNd1JtOWtXemZmSnZZZ3NYME41S04tYmZTc0lXckQwIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIiwicHJOdW1iZXIiOjEsImNvbW1pdFNoYSI6IjgxZTFlZmRmMjQ4Njg0MTBmODU0ZmViMDFiMDYwMTc4MGM0MWY0ZjciLCJwcm92aWRlciI6ImdpdGh1YiJ9LCJpYXQiOjE3NzE0NDUyNTgsImV4cCI6MTc3NDAzNzI1OH0.tPWqn8LFmhHMu4yioarRcIq3XaOL7I8-AnXgAEfrNmbqEa06ocHVoN1DdOg3XDO7_1GWiTE2muHx3eL8n278GeXGhb2h-3XAZrxH1ZyPLlamHLj4JOLIh0f_wzNbqTkwrmOmHh5_tmH-OxTh3dLUOs6sAi1cgBH6Wz2gJkfZSAILDPkOBne1-EvNj50xQi2ms4h_yJMpeKwaEDPwxJm7ZYjx9NqzaPErgXGD2NSUzYHep9AbSjGUumUhHt2rDxCgtC7DnMwjk9c-1DiXo9lShArQQFloMufHkxEM-HkZB589ZoKskjwAKdrgwSGfnP2mjZ03XFzXuaALtGdBlJ1zFQ" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cursor.com/assets/images/fix-in-web-dark.png"><source media="(prefers-color-scheme: light)" srcset="https://cursor.com/assets/images/fix-in-web-light.png"><img alt="Fix in Web" width="99" height="28" src="https://cursor.com/assets/images/fix-in-web-dark.png"></picture></a></p>
 
 ### johnenthonyevans — 2026-02-18T17:33:36Z
 
@@ -176,6 +196,11 @@ _Captured 2026-02-18T18:29:23Z (7s, interaction, window: Simulator — iPhone 17
 
 
 🧟‍♀️ Drift: Fixed two bugs from Cursor Bugbot: (1) Level sections now sort numerically (L3, L4, ... L10) instead of lexicographically. (2) Row subtitle no longer shows a dangling separator when audience is empty.
+
+### johnenthonyevans — 2026-02-18T19:55:12Z
+
+
+🧟‍♀️ Drift: Fixed case-sensitive name sort: names now use localizedCaseInsensitiveCompare so lowercase names like 'bohdan' sort alphabetically among uppercase names instead of after them.
 
 ## Tasks
 
