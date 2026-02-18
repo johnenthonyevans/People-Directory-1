@@ -1,0 +1,22 @@
+{
+  "audioIncluded": true,
+  "captureMode": "window",
+  "duration": 7,
+  "interactions": [],
+  "prNumber": 1,
+  "quality": "interaction",
+  "region": {
+    "height": 972,
+    "width": 456,
+    "x": 1571,
+    "y": 400
+  },
+  "repo": "johnenthonyevans/People-Directory-1",
+  "snaps": [
+    "snap-1.png"
+  ],
+  "status": "uploaded",
+  "timestamp": "2026-02-18T18:29:23Z",
+  "type": "capture",
+  "windowTitle": "Simulator — iPhone 17"
+}

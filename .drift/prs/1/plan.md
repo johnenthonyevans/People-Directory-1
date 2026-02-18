@@ -6,4 +6,6 @@ There is 1 thing that will be implemented:
 
 There is also feedback from other reviewers that would require @johnenthonyevans to approve Drift to act on:
 
+- @cursor[bot]: **People Directory 1/ContentView.swift:45**
+- @cursor[bot]: **People Directory 1/ContentView.swift:100**
 - @matej-doordash: I think the profile picture needs in the profile view needs a bit of a breathing room
