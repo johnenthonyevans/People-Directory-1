@@ -1,0 +1,31 @@
+{
+  "audioIncluded": true,
+  "captureMode": "window",
+  "duration": 31,
+  "folder": "/Users/john/Code/Sandboxes/People Directory 1",
+  "interactions": [
+    "interaction-1-00m08s000.png",
+    "interaction-2-00m09s000.png",
+    "interaction-3-00m10s000.png",
+    "interaction-4-00m15s000.png",
+    "interaction-5-00m16s000.png",
+    "interaction-6-00m16s000.png",
+    "interaction-7-00m17s000.png",
+    "interaction-8-00m17s000.png",
+    "interaction-9-00m29s000.png"
+  ],
+  "quality": "interaction",
+  "region": {
+    "height": 972,
+    "width": 456,
+    "x": 1571,
+    "y": 400
+  },
+  "snaps": [],
+  "status": "ready",
+  "timestamp": "2026-02-18T17:30:49Z",
+  "type": "make-pr",
+  "windowTitle": "Simulator — iPhone 17",
+  "repo": "johnenthonyevans/People-Directory-1",
+  "prNumber": 1
+}

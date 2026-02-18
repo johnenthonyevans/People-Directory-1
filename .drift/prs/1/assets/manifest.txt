@@ -1,0 +1,4 @@
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pre-pr/feat-people-directory-ui/2026-02-18T17-30-49Z/capture.mp4 asset-1.mp4
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pre-pr/feat-people-directory-ui/2026-02-18T17-30-49Z/interactions/interaction-1-00m08s000.png asset-2.png
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pre-pr/feat-people-directory-ui/2026-02-18T17-30-49Z/interactions/interaction-7-00m17s000.png asset-3.png
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pre-pr/feat-people-directory-ui/2026-02-18T17-30-49Z/interactions/interaction-9-00m29s000.png asset-4.png
