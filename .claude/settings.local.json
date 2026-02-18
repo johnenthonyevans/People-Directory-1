@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(drift-make-pr)",
+      "Bash(gh api:*)"
+    ]
+  }
+}

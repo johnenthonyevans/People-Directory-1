@@ -1,0 +1,5 @@
+[0s] I'm going to interact with the app. Normally you'd interact with it and I'd say —
+[5s] I've got the "People" title at the top. I'm thinking that's fine.
+[9s] I can click into a person and you can see here —
+[17s] It shows their level, role, country, and audience.
+[22s] I'm really curious about your thoughts on that, and if you have any feedback on this piece.
