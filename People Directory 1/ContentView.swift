@@ -41,7 +41,7 @@ struct ContentView: View {
             grouped = Dictionary(grouping: filteredPeople) { $0.country.isEmpty ? "Unknown" : $0.country }
         }
         return grouped
-            .map { (key: $0.key, people: $0.value.sorted { $0.fullName < $1.fullName }) }
+            .map { (key: $0.key, people: $0.value.sorted { $0.fullName.localizedCaseInsensitiveCompare($1.fullName) == .orderedAscending }) }
             .sorted {
                 if groupBy == .level {
                     let num0 = Int($0.key.dropFirst()) ?? Int.max
