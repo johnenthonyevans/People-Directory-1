@@ -17,7 +17,7 @@ Hey I think that it be great to add tabs so I can see the data grouped by level,
 ### @cursor[bot] — 2026-02-18T17:43:48Z
 
 
-**People Directory 1/ContentView.swift:45**
+**People Directory 1/ContentView.swift**
 
 ### Level sections sort lexicographically instead of numerically
 
@@ -37,7 +37,7 @@ LOCATIONS END -->
 ### @cursor[bot] — 2026-02-18T17:43:49Z
 
 
-**People Directory 1/ContentView.swift:100**
+**People Directory 1/ContentView.swift:107**
 
 ### Row subtitle shows dangling separator for empty audience
 
@@ -53,6 +53,26 @@ In `PersonRowView`, the subtitle is guarded by `!person.role.isEmpty` but uncond
 People Directory 1/ContentView.swift#L95-L100
 LOCATIONS END -->
 <p><a href="https://cursor.com/open?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9DVVJTT1IiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmQxNmEyMjg5LWRmMmItNDE0Ni1hYzA2LTkwYWY2YzBhOTBkZiIsImVuY3J5cHRpb25LZXkiOiJjYThGQ1FzeERjNEl0RlY5NzlMRHJCWEZXR2VSaXNkWDJXWXpobXpMd2ljIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIn0sImlhdCI6MTc3MTQzNjYyOCwiZXhwIjoxNzc0MDI4NjI4fQ.pg7lCjDZ2NSGB_59J2B9PUVwiyv2z5WuLEhEtox7EcJPRiaPptrw5OD3sDIgJxaMye16WWevFkCVx2y04pB-GOopXqK7Amiufn5b2lYPYTwavybS8w7Aleag9eScfXIUf6R7T5Zp12RWrbIsiBiKMBKDoN7JtczDQy01NLwx0JusDzomVa6OvPS4B-mXfxOmkMDU59lqpbgWnnWUMWtKOoH6321YfJrEFZd0e88GOunbIQBWcaU9eyaWcjc_Klf8HIJBsZt8GSLH3PgoV6YnvWKMNVTbbekFJa4JztDlmzN3oQUqsZO8tX1R_RmBy9VwS-4ZUbINsRj1720RKvnENg" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset=".drift/prs/1/assets/asset-1.png"><source media="(prefers-color-scheme: light)" srcset=".drift/prs/1/assets/asset-2.png"><img alt="Fix in Cursor" width="115" height="28" src=".drift/prs/1/assets/asset-1.png"></picture></a>&nbsp;<a href="https://cursor.com/agents?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9XRUIiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmQxNmEyMjg5LWRmMmItNDE0Ni1hYzA2LTkwYWY2YzBhOTBkZiIsImVuY3J5cHRpb25LZXkiOiJjYThGQ1FzeERjNEl0RlY5NzlMRHJCWEZXR2VSaXNkWDJXWXpobXpMd2ljIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIiwicHJOdW1iZXIiOjEsImNvbW1pdFNoYSI6IjMyZDJiZTdhYWYzYjU1YTNjNTZlOTU5OTcwMzYwYmQxNWZhZjU2YTgiLCJwcm92aWRlciI6ImdpdGh1YiJ9LCJpYXQiOjE3NzE0MzY2MjgsImV4cCI6MTc3NDAyODYyOH0.pfCjqZLjz9wCCZmwOLIqYXmR-eIYWVUmdl-QP2DSasdElqwtZUNdzK24qbDUpx4-e5z7tByETGeAGBvRqH8RspirU9yKA2_eqYQicfrDBLGV6bVAjOYmKHY8e6B8j_Oh8AnOdKVMmAoMXJhrN_gQFhhSS4i2Mdm-ooDznRhF7jcQsNLnkGAY3Bsnsd11XkGFuj0mwnH6XrAiq91tCytNPhZAzt36maktsGr_0OxF_ZIP20mv5GPChO2vXL0ZcwAtLMnmohLizqInIqyvH_AMPPeiVEB_odk8HoPXmUgZTOwprLFzOWBXrs51s07DLak5WgmOK06w8DH51fxCmZFguw" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset=".drift/prs/1/assets/asset-3.png"><source media="(prefers-color-scheme: light)" srcset=".drift/prs/1/assets/asset-4.png"><img alt="Fix in Web" width="99" height="28" src=".drift/prs/1/assets/asset-3.png"></picture></a></p>
+
+### @cursor[bot] — 2026-02-18T19:43:10Z
+
+
+**People Directory 1/ContentView.swift:44**
+
+### Case-sensitive sort misorders lowercase names in sections
+
+**Low Severity**
+
+<!-- DESCRIPTION START -->
+The within-section sort uses `$0.fullName < $1.fullName`, which is case-sensitive. In Swift, lowercase letters have higher Unicode scalar values than uppercase, so names starting with a lowercase letter (e.g. `"bohdan Pshenychnyi"` and `"yvon"` in the CSV) sort *after* all uppercase names in their section, instead of alphabetically among them. The search filter already uses `localizedCaseInsensitiveContains`, so the sort is inconsistent with that intent. Using `localizedCaseInsensitiveCompare` would produce the expected alphabetical ordering.
+<!-- DESCRIPTION END -->
+
+<!-- BUGBOT_BUG_ID: 7e11421f-eb04-4c1b-be91-850cec40aa8a -->
+
+<!-- LOCATIONS START
+People Directory 1/ContentView.swift#L43-L44
+LOCATIONS END -->
+<p><a href="https://cursor.com/open?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9DVVJTT1IiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmE1NWZjNmQzLTc1NWQtNGNlNy1iOGFlLTVjZjFjNDhiOGYyMyIsImVuY3J5cHRpb25LZXkiOiJnU2E2b0c5UmhEel8tNDRvMXB1azRhalpoaU9oOG9MZFRHY0RaUUJUT09NIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIn0sImlhdCI6MTc3MTQ0Mzc4OSwiZXhwIjoxNzc0MDM1Nzg5fQ.zLW1XmKse4wsXD0XWY_OdJc193T1CSz_i_tU0eKOLhIMpUd1DYldAbWjaPsGThMFNpnjFAwezlAwjCoyYIzMH9VqMIngpND20z3uoCggqpMXFOGo2dTj5Bd-ZOZVlMjh7XUvll8T678eFuPTB_E5VJo5kl3kfs_4epUXG62f3JR865d5-A6M7YxUSDzzboga7NAvTg76VHvVnUq0wnfvhlNvU5G9LMOLNVbcBZIRhItqcM0otDcJEYTIAGvqjQlX_6KBc5yIat9xnlawwlPKeDr2gPcgJwKoTOHKwC41NGqikpx3DcXCywTPVcFfNGGpAK2SCd9M9ATAwhYrSxUShw" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset=".drift/prs/1/assets/asset-1.png"><source media="(prefers-color-scheme: light)" srcset=".drift/prs/1/assets/asset-2.png"><img alt="Fix in Cursor" width="115" height="28" src=".drift/prs/1/assets/asset-1.png"></picture></a>&nbsp;<a href="https://cursor.com/agents?data=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJ1Z2JvdC12MiJ9.eyJ2ZXJzaW9uIjoxLCJ0eXBlIjoiQlVHQk9UX0ZJWF9JTl9XRUIiLCJkYXRhIjp7InJlZGlzS2V5IjoiYnVnYm90OmE1NWZjNmQzLTc1NWQtNGNlNy1iOGFlLTVjZjFjNDhiOGYyMyIsImVuY3J5cHRpb25LZXkiOiJnU2E2b0c5UmhEel8tNDRvMXB1azRhalpoaU9oOG9MZFRHY0RaUUJUT09NIiwiYnJhbmNoIjoiZmVhdC9wZW9wbGUtZGlyZWN0b3J5LXVpIiwicmVwb093bmVyIjoiam9obmVudGhvbnlldmFucyIsInJlcG9OYW1lIjoiUGVvcGxlLURpcmVjdG9yeS0xIiwicHJOdW1iZXIiOjEsImNvbW1pdFNoYSI6ImVkZGY1NWIzZjQzNmE0YTBkODA3ZmI3ZDUxMGYwZjA5M2MzNTU2NTAiLCJwcm92aWRlciI6ImdpdGh1YiJ9LCJpYXQiOjE3NzE0NDM3ODksImV4cCI6MTc3NDAzNTc4OX0.LOswwTDjWxJAWYTVnhEv2XTtWKOsrolHqDDtCBsiq33ARygZCV8UJTEco4WfE6qm0bgeZNfa0btzGI2E09I81OBgO1JD5nF11ZcX5DrEiG6nL95QDIsgqIr_bevj5gySfkQdbCYC6CT66cI9zL7XHQ8Y-9xCw5iyuSCw-pTLa4IPd5yo1FzdMMLluOikGeblDhXLQblTYIANeEAvJJzTfdplJx6-0Xgxd7vnEefjDPHNGXaCcXEJIYdmV8M508vWtALsj_e1rUGE3DYh8GalfEuGMint2VUAeupb_N_uf0fZoVYHTjoTEchRvcu80XqjAvWvi7pqxiYFAIMcnDecLw" target="_blank" rel="noopener noreferrer"><picture><source media="(prefers-color-scheme: dark)" srcset=".drift/prs/1/assets/asset-3.png"><source media="(prefers-color-scheme: light)" srcset=".drift/prs/1/assets/asset-4.png"><img alt="Fix in Web" width="99" height="28" src=".drift/prs/1/assets/asset-3.png"></picture></a></p>
 
 ### @matej-doordash — 2026-02-18T18:08:23Z
 
@@ -89,14 +109,14 @@ _Created with Drift capture_
 
 > [!NOTE]
 > **Medium Risk**
-> New CSV parsing and a large bundled dataset now drive list rendering, search, and grouping; malformed/edge-case rows could lead to missing entries or incorrect sections.
+> Introduces new CSV parsing and a large bundled dataset that now drives list rendering, search, and grouping; malformed/edge-case rows or performance issues could impact UI correctness.
 > 
 > **Overview**
-> Adds an in-app people directory backed by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing to populate the UI.
+> Adds an in-app **People directory** backed by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing.
 > 
-> Replaces the placeholder `ContentView` with a `NavigationStack` showing a searchable list and a segmented **Group by** control (Name/Level/Location) that sections and sorts results, plus a new `PersonDetailView` for per-person fields (track/level/role/country/audience).
+> Replaces the placeholder `ContentView` with a searchable, sectioned list and a segmented *Group by* control (Name/Level/Location), plus navigation to a new `PersonDetailView`; also fixes Level sorting to be numeric (e.g., `L3`…`L11`) and avoids a dangling separator when `audience` is empty in the row subtitle.
 > 
-> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 4c67316346a4946b5eec8af37fcc868614ea89b1. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit eddf55b3f436a4a0d807fb7d510f0f093c355650. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
 <!-- /CURSOR_SUMMARY -->
 
 ## Instructions
