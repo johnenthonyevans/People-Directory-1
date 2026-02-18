@@ -42,7 +42,14 @@ struct ContentView: View {
         }
         return grouped
             .map { (key: $0.key, people: $0.value.sorted { $0.fullName < $1.fullName }) }
-            .sorted { $0.key < $1.key }
+            .sorted {
+                if groupBy == .level {
+                    let num0 = Int($0.key.dropFirst()) ?? Int.max
+                    let num1 = Int($1.key.dropFirst()) ?? Int.max
+                    return num0 < num1
+                }
+                return $0.key < $1.key
+            }
     }
 
     var body: some View {
@@ -93,8 +100,8 @@ struct PersonRowView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(person.fullName)
                     .font(.body.weight(.medium))
-                if !person.role.isEmpty {
-                    Text("\(person.role) · \(person.audience)")
+                if !person.role.isEmpty || !person.audience.isEmpty {
+                    Text([person.role, person.audience].filter { !$0.isEmpty }.joined(separator: " · "))
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
