@@ -1,0 +1,56 @@
+[
+  {
+    "cursor_x" : 0.50600000000000001,
+    "cursor_y" : 0.16400000000000001,
+    "file" : "interaction-1-00m02s000.png",
+    "index" : 1,
+    "timestamp" : 2,
+    "timestamp_ms" : 2000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.64800000000000002,
+    "cursor_y" : 0.16800000000000001,
+    "file" : "interaction-2-00m03s000.png",
+    "index" : 2,
+    "timestamp" : 3,
+    "timestamp_ms" : 3000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.51800000000000002,
+    "cursor_y" : 0.34200000000000003,
+    "file" : "interaction-3-00m05s000.png",
+    "index" : 3,
+    "timestamp" : 5,
+    "timestamp_ms" : 5000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.16200000000000001,
+    "cursor_y" : 0.17699999999999999,
+    "file" : "interaction-4-00m06s000.png",
+    "index" : 4,
+    "timestamp" : 6,
+    "timestamp_ms" : 6000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.47499999999999998,
+    "cursor_y" : 0.17399999999999999,
+    "file" : "interaction-5-00m07s000.png",
+    "index" : 5,
+    "timestamp" : 7,
+    "timestamp_ms" : 7000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.33000000000000002,
+    "cursor_y" : 0.17199999999999999,
+    "file" : "interaction-6-00m07s000.png",
+    "index" : 6,
+    "timestamp" : 7,
+    "timestamp_ms" : 7000,
+    "trigger" : "click"
+  }
+]

@@ -37,14 +37,14 @@ _Created with Drift capture_
 
 > [!NOTE]
 > **Medium Risk**
-> Introduces new CSV parsing and a large bundled dataset that directly drives UI navigation/filtering; malformed data or parsing edge cases could lead to missing/incorrect entries or empty lists.
+> New CSV parsing plus a large bundled dataset now drives navigation and grouping; malformed/edge-case CSV rows could lead to missing entries, incorrect sections, or empty lists.
 > 
 > **Overview**
-> Adds an in-app people directory by replacing the placeholder `ContentView` with a `NavigationStack`-based, searchable list of people and a navigation-driven detail screen.
+> Adds an in-app people directory backed by a bundled `people.csv`, including a new `Person` model and `PeopleData.load()` CSV parsing to populate the UI.
 > 
-> Introduces a new `Person` model plus `PeopleData.load()` to read `people.csv` from the app bundle and parse it into `Person` records, and adds the initial `people.csv` dataset that populates the directory.
+> Replaces the placeholder `ContentView` with a `NavigationStack` that shows a searchable list of people, supports **segmented “Group by” tabs** (name/level/location) to section the list, and navigates to a `PersonDetailView` showing per-person attributes (track/level/role/country/audience).
 > 
-> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit a1402ba520036e184979d3694577b2feb757addb. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
+> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 32d2be7aaf3b55a3c56e959970360bd15faf56a8. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>
 <!-- /CURSOR_SUMMARY -->
 
 ## Comments
@@ -53,6 +53,41 @@ _Created with Drift capture_
 
 
 Hey I think that it be great to add tabs so I can see the data grouped by level, location, or name. 
+
+### johnenthonyevans — 2026-02-18T17:37:10Z
+
+
+🧟‍♀️ Drift: Added segmented picker with Name/Level/Location tabs. People list is now grouped into sections by first letter of name, level (L5-L10), or country. Each section is sorted alphabetically.
+
+### johnenthonyevans — 2026-02-18T17:38:25Z
+
+
+### 🧟‍♀️ Drift: Capture
+
+https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/capture.mp4
+
+![interaction-1-00m02s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-1-00m02s000.png)
+
+![interaction-2-00m03s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-2-00m03s000.png)
+
+![interaction-3-00m05s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-3-00m05s000.png)
+
+![interaction-4-00m06s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-4-00m06s000.png)
+
+![interaction-5-00m07s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-5-00m07s000.png)
+
+![interaction-6-00m07s000.png](https://github.com/johnenthonyevans/People-Directory-1/raw/screenshots/captures/pr-1/2026-02-18T17-38-18Z/interactions/interaction-6-00m07s000.png)
+
+**Transcript:**
+> Cool I added the tabs I
+kind of agreed they look pretty good so let's stick with the tabs
+
+_Captured 2026-02-18T17:38:18Z (9s, interaction, window: Simulator — iPhone 17)_
+
+### matej-doordash — 2026-02-18T18:08:23Z
+
+
+I think the profile picture needs in the profile view needs a bit of a breathing room
 
 ## Tasks
 
