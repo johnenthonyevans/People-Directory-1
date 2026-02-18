@@ -129,7 +129,7 @@ struct PersonDetailView: View {
                     }
                     Spacer()
                 }
-                .listRowInsets(EdgeInsets())
+                .padding(.vertical, 12)
             }
             Section("Details") {
                 if !person.level.isEmpty {
