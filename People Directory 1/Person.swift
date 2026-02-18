@@ -15,7 +15,7 @@ struct Person: Identifiable, Hashable {
     let audience: String
 
     var initials: String {
-        let parts = fullName.split(separator: " ")
+        let parts = fullName.split(separator: " ").filter { !$0.hasPrefix("[") }
         if parts.count >= 2, let first = parts.first?.first, let last = parts.last?.first {
             return "\(first)\(last)".uppercased()
         }
