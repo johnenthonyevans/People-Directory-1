@@ -1,4 +1,0 @@
-https://cursor.com/assets/images/fix-in-cursor-dark.png asset-1.png
-https://cursor.com/assets/images/fix-in-cursor-light.png asset-2.png
-https://cursor.com/assets/images/fix-in-web-dark.png asset-3.png
-https://cursor.com/assets/images/fix-in-web-light.png asset-4.png
