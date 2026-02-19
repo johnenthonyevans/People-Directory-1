@@ -100,7 +100,7 @@ struct ContentView: View {
                         Section {
                             ForEach(section.people) { person in
                                 PersonCardView(person: person, namespace: animation, isSelected: selectedPerson?.id == person.id)
-                                    .onTapGesture { withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { selectedPerson = person } }
+                                    .onTapGesture { withAnimation(.spring(response: 0.4, dampingFraction: 0.75)) { selectedPerson = person } }
                                     .contextMenu { PersonContextMenu(person: person) }
                                     .accessibilityLabel(person.accessibilityLabel)
                             }
@@ -126,7 +126,7 @@ struct ContentView: View {
             .overlay {
                 if let person = selectedPerson {
                     PersonDetailSheet(person: person, namespace: animation) {
-                        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { selectedPerson = nil }
+                        withAnimation(.spring(response: 0.4, dampingFraction: 0.75)) { selectedPerson = nil }
                     }
                 }
             }
@@ -250,6 +250,8 @@ struct PersonCardView: View {
         .background(.background, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
         .shadow(color: .black.opacity(0.04), radius: 2, y: 1)
         .padding(.vertical, 3)
+        .scaleEffect(isSelected ? 0.95 : 1)
+        .blur(radius: isSelected ? 3 : 0)
         .opacity(isSelected ? 0 : 1)
     }
 }
