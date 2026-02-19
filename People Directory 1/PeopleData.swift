@@ -35,6 +35,7 @@ enum PeopleData {
             }
 
             people.append(Person(
+                id: name, // Use fullName as stable ID
                 fullName: name,
                 photoURL: photoURL,
                 track: fields[2].trimmingCharacters(in: .whitespaces),
@@ -51,10 +52,21 @@ enum PeopleData {
         var fields: [String] = []
         var current = ""
         var inQuotes = false
-        for char in line {
+        var chars = Array(line)
+        var i = 0
+
+        while i < chars.count {
+            let char = chars[i]
             if inQuotes {
                 if char == "\"" {
-                    inQuotes = false
+                    // Check if next char is also a quote (escaped quote)
+                    if i + 1 < chars.count && chars[i + 1] == "\"" {
+                        current.append("\"")
+                        i += 2 // Skip both quotes
+                        continue
+                    } else {
+                        inQuotes = false
+                    }
                 } else {
                     current.append(char)
                 }
@@ -68,6 +80,7 @@ enum PeopleData {
                     current.append(char)
                 }
             }
+            i += 1
         }
         fields.append(current)
         return fields

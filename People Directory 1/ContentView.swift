@@ -42,9 +42,10 @@ struct ContentView: View {
 
     var availableLevels: [String] {
         Array(Set(people.compactMap { $0.level.isEmpty ? nil : $0.level }))
-            .sorted {
-                let n0 = Int($0.dropFirst()) ?? Int.max
-                let n1 = Int($1.dropFirst()) ?? Int.max
+            .sorted { level0, level1 in
+                // Use Person's levelNumber logic for consistency
+                let n0 = level0.hasPrefix("L") ? (Int(level0.dropFirst()) ?? Int.max) : Int.max
+                let n1 = level1.hasPrefix("L") ? (Int(level1.dropFirst()) ?? Int.max) : Int.max
                 return n0 < n1
             }
     }
@@ -81,8 +82,9 @@ struct ContentView: View {
             .map { (key: $0.key, people: $0.value.sorted { $0.fullName.localizedCaseInsensitiveCompare($1.fullName) == .orderedAscending }) }
             .sorted {
                 if groupBy == .level {
-                    let n0 = Int($0.key.dropFirst()) ?? Int.max
-                    let n1 = Int($1.key.dropFirst()) ?? Int.max
+                    // Use Person's levelNumber logic for consistency
+                    let n0 = $0.key.hasPrefix("L") ? (Int($0.key.dropFirst()) ?? Int.max) : Int.max
+                    let n1 = $1.key.hasPrefix("L") ? (Int($1.key.dropFirst()) ?? Int.max) : Int.max
                     return n0 < n1
                 }
                 return $0.key < $1.key

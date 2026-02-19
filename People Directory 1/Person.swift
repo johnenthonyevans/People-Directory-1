@@ -6,7 +6,7 @@
 import Foundation
 
 struct Person: Identifiable, Hashable {
-    let id = UUID()
+    let id: String
     let fullName: String
     let photoURL: URL?
     let track: String
