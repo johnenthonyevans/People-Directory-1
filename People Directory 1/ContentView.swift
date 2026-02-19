@@ -99,7 +99,7 @@ struct ContentView: View {
                     ForEach(groupedPeople, id: \.key) { section in
                         Section {
                             ForEach(section.people) { person in
-                                PersonCardView(person: person, namespace: animation)
+                                PersonCardView(person: person, namespace: animation, isSelected: selectedPerson?.id == person.id)
                                     .onTapGesture { withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { selectedPerson = person } }
                                     .contextMenu { PersonContextMenu(person: person) }
                                     .accessibilityLabel(person.accessibilityLabel)
@@ -207,16 +207,17 @@ struct FilterChip: View {
 struct PersonCardView: View {
     let person: Person
     var namespace: Namespace.ID
+    var isSelected: Bool = false
 
     var body: some View {
         HStack(spacing: 14) {
             AvatarView(person: person)
-                .matchedGeometryEffect(id: "avatar-\(person.id)", in: namespace)
+                .matchedGeometryEffect(id: "avatar-\(person.id)", in: namespace, isSource: !isSelected)
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(person.fullName)
                     .font(.body.weight(.semibold))
-                    .matchedGeometryEffect(id: "name-\(person.id)", in: namespace)
+                    .matchedGeometryEffect(id: "name-\(person.id)", in: namespace, isSource: !isSelected)
 
                 if !person.role.isEmpty || !person.audience.isEmpty {
                     Text([person.role, person.audience].filter { !$0.isEmpty }.joined(separator: " · "))
@@ -242,13 +243,14 @@ struct PersonCardView: View {
                     .background(person.levelColor.opacity(0.15))
                     .foregroundStyle(person.levelColor)
                     .clipShape(Capsule())
-                    .matchedGeometryEffect(id: "level-\(person.id)", in: namespace)
+                    .matchedGeometryEffect(id: "level-\(person.id)", in: namespace, isSource: !isSelected)
             }
         }
         .padding(14)
         .background(.background, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
         .shadow(color: .black.opacity(0.04), radius: 2, y: 1)
         .padding(.vertical, 3)
+        .opacity(isSelected ? 0 : 1)
     }
 }
 
@@ -327,11 +329,11 @@ struct PersonDetailSheet: View {
                 // Header
                 VStack(spacing: 12) {
                     AvatarView(person: person, size: 80)
-                        .matchedGeometryEffect(id: "avatar-\(person.id)", in: namespace)
+                        .matchedGeometryEffect(id: "avatar-\(person.id)", in: namespace, isSource: true)
 
                     Text(person.fullName)
                         .font(.title2.weight(.bold))
-                        .matchedGeometryEffect(id: "name-\(person.id)", in: namespace)
+                        .matchedGeometryEffect(id: "name-\(person.id)", in: namespace, isSource: true)
 
                     if !person.track.isEmpty {
                         Text(person.track)
@@ -347,7 +349,7 @@ struct PersonDetailSheet: View {
                             .background(person.levelColor.opacity(0.15))
                             .foregroundStyle(person.levelColor)
                             .clipShape(Capsule())
-                            .matchedGeometryEffect(id: "level-\(person.id)", in: namespace)
+                            .matchedGeometryEffect(id: "level-\(person.id)", in: namespace, isSource: true)
                     }
                 }
                 .padding(.top, 32)
