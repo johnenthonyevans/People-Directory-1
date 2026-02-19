@@ -30,3 +30,7 @@ Use a compact badge for “level” (e.g., L3) — consistent shape (rounded cap
 Motion: subtle scale + shadow on press, smooth detail transition (matched geometry).
 Microcopy: show contact method first (email/Slack), then role/level, then location.
 Accessibility: VoiceOver labels like “Ava Chen, Senior Product Designer, Level L4, San Francisco office.”
+
+There is also feedback from other reviewers that would require @johnenthonyevans to approve Drift to act on:
+
+- @cursor[bot]: **People Directory 1/ContentView.swift:106**

@@ -197,7 +197,7 @@ struct FilterChip: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 6)
         .background(isActive ? Color.accentColor.opacity(0.15) : Color(.tertiarySystemFill))
-        .foregroundStyle(isActive ? .accent : .primary)
+        .foregroundStyle(isActive ? Color.accentColor : .primary)
         .clipShape(Capsule())
     }
 }
