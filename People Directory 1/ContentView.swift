@@ -32,7 +32,7 @@ extension Person {
 // MARK: - Content View
 
 struct ContentView: View {
-    let people = PeopleData.load()
+    @State private var people = PeopleData.load()
     @State private var searchText = ""
     @State private var groupBy: GroupBy = .name
     @State private var selectedPerson: Person?

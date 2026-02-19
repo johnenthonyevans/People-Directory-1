@@ -94,6 +94,7 @@ iOSInjectionProject/
 .drift/
 *.xcarchive
 ExportOptions.plist
+.drift-*.md
 
 # macOS
 .DS_Store
