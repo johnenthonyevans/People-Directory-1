@@ -1,0 +1,47 @@
+[
+  {
+    "cursor_x" : 0.16400000000000001,
+    "cursor_y" : 0.42699999999999999,
+    "file" : "interaction-1-00m01s000.png",
+    "index" : 1,
+    "timestamp" : 1,
+    "timestamp_ms" : 1000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.55300000000000005,
+    "cursor_y" : 0.78300000000000003,
+    "file" : "interaction-2-00m06s000.png",
+    "index" : 2,
+    "timestamp" : 6,
+    "timestamp_ms" : 6000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.39400000000000002,
+    "cursor_y" : 0.44400000000000001,
+    "file" : "interaction-3-00m08s000.png",
+    "index" : 3,
+    "timestamp" : 8,
+    "timestamp_ms" : 8000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.623,
+    "cursor_y" : 0.79000000000000004,
+    "file" : "interaction-4-00m10s000.png",
+    "index" : 4,
+    "timestamp" : 10,
+    "timestamp_ms" : 10000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.56799999999999995,
+    "cursor_y" : 0.77300000000000002,
+    "file" : "interaction-5-00m11s000.png",
+    "index" : 5,
+    "timestamp" : 11,
+    "timestamp_ms" : 11000,
+    "trigger" : "click"
+  }
+]
