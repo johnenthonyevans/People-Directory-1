@@ -43,9 +43,11 @@ struct ContentView: View {
     var availableLevels: [String] {
         Array(Set(people.compactMap { $0.level.isEmpty ? nil : $0.level }))
             .sorted { level0, level1 in
-                // Use Person's levelNumber logic for consistency
-                let n0 = level0.hasPrefix("L") ? (Int(level0.dropFirst()) ?? Int.max) : Int.max
-                let n1 = level1.hasPrefix("L") ? (Int(level1.dropFirst()) ?? Int.max) : Int.max
+                // Create temporary Person objects to use levelNumber logic
+                let p0 = Person(id: "", fullName: "", photoURL: nil, track: "", level: level0, role: "", country: "", audience: "")
+                let p1 = Person(id: "", fullName: "", photoURL: nil, track: "", level: level1, role: "", country: "", audience: "")
+                let n0 = p0.levelNumber ?? Int.max
+                let n1 = p1.levelNumber ?? Int.max
                 return n0 < n1
             }
     }
@@ -82,9 +84,11 @@ struct ContentView: View {
             .map { (key: $0.key, people: $0.value.sorted { $0.fullName.localizedCaseInsensitiveCompare($1.fullName) == .orderedAscending }) }
             .sorted {
                 if groupBy == .level {
-                    // Use Person's levelNumber logic for consistency
-                    let n0 = $0.key.hasPrefix("L") ? (Int($0.key.dropFirst()) ?? Int.max) : Int.max
-                    let n1 = $1.key.hasPrefix("L") ? (Int($1.key.dropFirst()) ?? Int.max) : Int.max
+                    // Create temporary Person objects to use levelNumber logic
+                    let p0 = Person(id: "", fullName: "", photoURL: nil, track: "", level: $0.key, role: "", country: "", audience: "")
+                    let p1 = Person(id: "", fullName: "", photoURL: nil, track: "", level: $1.key, role: "", country: "", audience: "")
+                    let n0 = p0.levelNumber ?? Int.max
+                    let n1 = p1.levelNumber ?? Int.max
                     return n0 < n1
                 }
                 return $0.key < $1.key

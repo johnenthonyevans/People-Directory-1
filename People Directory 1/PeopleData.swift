@@ -34,8 +34,11 @@ enum PeopleData {
                 photoURL = URL(string: urlString)
             }
 
+            // Use name + row index to ensure unique IDs even with duplicate names
+            let uniqueId = "\(name)-\(index)"
+
             people.append(Person(
-                id: name, // Use fullName as stable ID
+                id: uniqueId,
                 fullName: name,
                 photoURL: photoURL,
                 track: fields[2].trimmingCharacters(in: .whitespaces),
