@@ -35,7 +35,7 @@ enum PeopleData {
             }
 
             people.append(Person(
-                id: name, // Use fullName as stable ID
+                id: "\(name)-\(index)", // Use name + row index to ensure uniqueness
                 fullName: name,
                 photoURL: photoURL,
                 track: fields[2].trimmingCharacters(in: .whitespaces),
