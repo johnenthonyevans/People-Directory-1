@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		52C46AB12F461D60003CBA9F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C46AA12F461D60003CBA9F /* Person.swift */; };
+		52C46AB22F461D60003CBA9F /* PeopleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C46AA22F461D60003CBA9F /* PeopleData.swift */; };
+		52C46AB32F461D60003CBA9F /* people.csv in Resources */ = {isa = PBXBuildFile; fileRef = 52C46AA32F461D60003CBA9F /* people.csv */; };
+		52C46AB42F461D60003CBA9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C46AA42F461D60003CBA9F /* ContentView.swift */; };
+		52C46AB52F461D60003CBA9F /* People_Directory_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C46AA52F461D60003CBA9F /* People_Directory_1App.swift */; };
+		52C46AB62F461D60003CBA9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C46AA62F461D60003CBA9F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		52C46A912F461D53003CBA9F /* People Directory 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "People Directory 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C46AA12F461D60003CBA9F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		52C46AA22F461D60003CBA9F /* PeopleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleData.swift; sourceTree = "<group>"; };
+		52C46AA32F461D60003CBA9F /* people.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = people.csv; sourceTree = "<group>"; };
+		52C46AA42F461D60003CBA9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52C46AA52F461D60003CBA9F /* People_Directory_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People_Directory_1App.swift; sourceTree = "<group>"; };
+		52C46AA62F461D60003CBA9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		52C46A932F461D53003CBA9F /* People Directory 1 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "People Directory 1";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		52C46A8E2F461D53003CBA9F /* Frameworks */ = {
@@ -45,6 +52,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		52C46A932F461D53003CBA9F /* People Directory 1 */ = {
+			isa = PBXGroup;
+			children = (
+				52C46AA52F461D60003CBA9F /* People_Directory_1App.swift */,
+				52C46AA42F461D60003CBA9F /* ContentView.swift */,
+				52C46AA12F461D60003CBA9F /* Person.swift */,
+				52C46AA22F461D60003CBA9F /* PeopleData.swift */,
+				52C46AA32F461D60003CBA9F /* people.csv */,
+				52C46AA62F461D60003CBA9F /* Assets.xcassets */,
+			);
+			path = "People Directory 1";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -59,9 +79,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				52C46A932F461D53003CBA9F /* People Directory 1 */,
 			);
 			name = "People Directory 1";
 			packageProductDependencies = (
@@ -109,6 +126,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C46AB32F461D60003CBA9F /* people.csv in Resources */,
+				52C46AB62F461D60003CBA9F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +138,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C46AB12F461D60003CBA9F /* Person.swift in Sources */,
+				52C46AB22F461D60003CBA9F /* PeopleData.swift in Sources */,
+				52C46AB42F461D60003CBA9F /* ContentView.swift in Sources */,
+				52C46AB52F461D60003CBA9F /* People_Directory_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = K2XB837E84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -284,7 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = K2XB837E84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
