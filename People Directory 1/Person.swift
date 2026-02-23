@@ -24,7 +24,12 @@ struct Person: Identifiable, Hashable {
     }
 
     var levelNumber: Int? {
-        guard level.hasPrefix("L"), let num = Int(level.dropFirst()) else { return nil }
+        Person.levelNumber(from: level)
+    }
+
+    /// Extract level number from a level string (e.g., "L3" -> 3)
+    static func levelNumber(from levelString: String) -> Int? {
+        guard levelString.hasPrefix("L"), let num = Int(levelString.dropFirst()) else { return nil }
         return num
     }
 
